@@ -138,6 +138,7 @@ while ("y","n" -notcontains $response)
 
 if ($response -eq "y") {
     notepad $Profile
+    theEnd
 } 
 elseif ($response -eq "n") {
     theEnd
