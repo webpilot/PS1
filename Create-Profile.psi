@@ -137,7 +137,9 @@ do {$response = Read-Host " $ENV:USERNAME, Would you like to open your Profile a
 while ("y","n" -notcontains $response) 
 
 if ($response -eq "y") {
-    notepad $Profile
+    Clear-Host
+    notepad $Profile | Out-Null
+    #Start-Process powershell -WindowStyle Hidden
     theEnd
 } 
 elseif ($response -eq "n") {
