@@ -94,10 +94,8 @@ if (Test-Path $profile) {
  Write-Host ""
  } else {
     [console]::ForegroundColor = "Red"  
-    do {$newProfile = Read-Host " `n`n $ENV:USERNAME, I did't find a profile would you like me to create a blank one now (Y/N)"   
-        if ("y","n" -notcontains $newProfile) {
+    do {$newProfile = Read-Host " `n`n $ENV:USERNAME, I did't find a profile would you like me to create a blank one now (Y/N)"
             eMsg
-        }
     }
     while ("y","n" -notcontains $newProfile)
     
@@ -139,7 +137,6 @@ while ("y","n" -notcontains $response)
 if ($response -eq "y") {
     Clear-Host
     notepad $Profile | Out-Null
-    #Start-Process powershell -WindowStyle Hidden
     theEnd
 } 
 elseif ($response -eq "n") {
